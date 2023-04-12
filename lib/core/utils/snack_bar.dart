@@ -1,0 +1,15 @@
+
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+class SnackBarMessage {
+
+  void showSuccessSnackBar({required String message , required BuildContext context}){
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message) , backgroundColor: Colors.green,));
+  }
+
+  void showErrorSnackBar({required String message , required BuildContext context}){
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message) , backgroundColor: Colors.red,));
+  }
+
+}
